@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="card-row">
+    <div class="card-header">
+      <h1>{{title}}</h1></div>
+    <div class="card-body">
+      <app-task-form></app-task-form>
+    </div>
+    <div class="card-body">
+      <h2>My Current Task ({{taskList.length}})</h2>  
+      <app-task-list [tasks]="taskList"></app-task-list>
+    </div>
+  </div>
+</div>
