@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-task-form',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskFormComponent implements OnInit {
 
+  @Input() taskList: string[] = [];
+  newTask: string = '';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addTodo(){
+    this.taskList.unshift(this.newTask);
+    localStorage.setItem('my_tasks', JSON.stringify(this.taskList))
+    this.newTask = '';
   }
 
 }

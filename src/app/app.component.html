@@ -3,7 +3,7 @@
     <div class="card-header">
       <h1>{{title}}</h1></div>
     <div class="card-body">
-      <app-task-form></app-task-form>
+      <app-task-form [taskList]="taskList"></app-task-form>
     </div>
     <div class="card-body">
       <h2>My Current Task ({{taskList.length}})</h2>  
