@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { FilterPipePipe } from './filter-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskFormComponent,
-    TaskListComponent
+    TaskListComponent,
+    FilterPipePipe
   ],
   imports: [
     BrowserModule,

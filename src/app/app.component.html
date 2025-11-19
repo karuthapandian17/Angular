@@ -6,8 +6,10 @@
       <app-task-form [taskList]="taskList"></app-task-form>
     </div>
     <div class="card-body">
-      <h2>My Current Task ({{taskList.length}})</h2>  
-      <app-task-list [tasks]="taskList"></app-task-list>
+      <app-task-list [tasks]="taskList">
+        <h3 *ngIf="taskList.length">My Current Task ({{taskList.length}})</h3> 
+        <h3 *ngIf="!taskList.length">No Task Available,create one ..</h3> 
+      </app-task-list>
     </div>
   </div>
 </div>
